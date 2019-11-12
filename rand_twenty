@@ -1,0 +1,7 @@
+from random import *
+lst = []
+for i in range(20):
+    lst.append(randint(10, 99))
+lst[:10] = sorted(lst[:10])
+lst[10:] = sorted(lst[10:], reverse=True)
+print(lst)
