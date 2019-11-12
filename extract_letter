@@ -6,4 +6,8 @@ for j in lst:
         if j not in letter:
             letter.append(j)
 letter.sort(reverse=False)
-print(letter)
+for i in letter:
+    if i == letter[-1]:
+        print(i)
+    else:
+        print(i, ",", end="")
