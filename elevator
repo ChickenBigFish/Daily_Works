@@ -1,0 +1,8 @@
+lst_floor = [1, 4, 2, 5, 7, 3]
+lst = list(zip(lst_floor[:-1], lst_floor[1:]))
+for i in lst:
+    j = i[1] - i[0]
+    if j > 0:
+        print("↑"*j, end="")
+    if j < 0:
+        print("↓"*(-j), end="")
