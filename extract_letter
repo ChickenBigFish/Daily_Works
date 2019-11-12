@@ -1,0 +1,9 @@
+letters = input("请输入英文字符串：")
+lst = letters.upper()
+letter = []
+for j in lst:
+    if "A" < j < "Z":
+        if j not in letter:
+            letter.append(j)
+letter.sort(reverse=False)
+print(letter)
