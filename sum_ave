@@ -1,0 +1,7 @@
+s = "语文：80，数学：82，英语：90，物理：85，化学：88，美术：80"
+lst = s.split("，")
+s = 0
+for i in lst:
+    s = s + eval(i[3:])
+ave = s / len(lst)
+print("总分为：{}，平均分为：{:.1f}".format(s, ave))
