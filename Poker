@@ -1,0 +1,17 @@
+from random import *
+lst_suit = ["黑桃", "红桃", "梅花", "方块"]
+lst_face = ['3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A', '2']
+lst = [i+j for i in lst_face for j in lst_suit]
+shuffle(lst)
+a = eval(input("请输入你的序号："))
+print("你的牌：", lst[a])
+hum = lst[a][:-2]
+b = randint(0, 51)
+print("计算机的牌：", lst[b])
+comp = lst[b][:-2]
+if lst_face.index(hum) > lst_face.index(comp):
+    print("恭喜，您赢了！")
+elif lst_face.index(hum) < lst_face.index(comp):
+    print("很遗憾，您输了！")
+else:
+    print("咱们平手了！")
