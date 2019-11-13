@@ -5,3 +5,11 @@ for i in range(20):
 lst[:10] = sorted(lst[:10])
 lst[10:] = sorted(lst[10:], reverse=True)
 print(lst)
+
+或者
+
+from random import *
+lst = sample(range(10,100), 20)
+lst[:10] = sorted(lst[:10])
+lst[10:] = sorted(lst[10:], reverse=True)
+print(lst)
