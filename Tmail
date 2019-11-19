@@ -1,0 +1,19 @@
+myDict = {"方糖": 99, "X1": 499, "魔盒": 399, "曲奇": 299}
+for k, v in myDict.items():
+    count = 0
+    fix = 0
+    for i in k:
+        if "\u4e00" <= i <= "\u9fff":
+            count += 1
+    fix = 4 - len(k) - count
+    print(k, " "*fix, "{:·^12}{:>5}元".format("·", v))
+Sum = 0
+Count = 0
+for j in myDict.values():
+    Sum += j
+    Count += 1
+ave = Sum / Count
+print("平均价格为：{:.2f}元".format(ave))
+lst = list((o, p) for p, o in myDict.items())
+lst = sorted(lst, reverse=True)
+print("价格最高的产品为：", lst[0][1])
